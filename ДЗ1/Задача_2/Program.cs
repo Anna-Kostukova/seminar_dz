@@ -3,8 +3,24 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-int a = -9;
-int b = -3;
 
-if (a > b) Console.WriteLine(a);
-else Console.WriteLine(b);
+Console.Write("Введите первое число: ");
+int number1 = int.Parse(Console.ReadLine());
+
+Console.Write("Введите второе число: ");
+int number2 = int.Parse(Console.ReadLine());
+
+int max = 0;
+
+if (number1 > number2) 
+{
+    max = number1;
+    Console.WriteLine("max = " + number1);
+}    
+  else
+{
+    max = number2;
+    Console.WriteLine("max = " + number2);
+}
+
+
