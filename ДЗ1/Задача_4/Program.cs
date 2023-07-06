@@ -3,15 +3,20 @@
 // 44 5 78 -> 78
 // 22 3 9 -> 22
 
-int a = 22;
-int b = 3;
-int c = 9;
+Console.Write("Введите первое число: ");
+int number1 = int.Parse(Console.ReadLine());
 
-int max = a;
+Console.Write("Введите второе число: ");
+int number2 = int.Parse(Console.ReadLine());
 
-if(a > max) max = a;
-if(b > max) max = b;
-if(c > max) max = c;
+Console.Write("Введите первое число: ");
+int number3 = int.Parse(Console.ReadLine());
+
+int max = number1;
+
+if(number1 > max) max = number1;
+if(number2 > max) max = number2;
+if(number3 > max) max = number3;
 
 Console.WriteLine(max);
 
