@@ -18,7 +18,7 @@ int GetLastDigit(int number1)
 
 void PrintNumber(int num1) // невозвращаемый метод, выводим на печать
 {
-    Console.Write(num1 + " -> " + " ");
+    Console.Write($"Вторая цифра числа: {num1}" + " ");
 }
 
 int num = GetRandomNumber();
