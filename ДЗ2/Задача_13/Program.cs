@@ -3,19 +3,31 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int GetRandomNumber() 
+int Prompt(string msg)
 {
-int number = new Random().Next(100, 1000); 
-return number;
+
+Console.WriteLine($"{msg}");
+return int.Parse(Console.ReadLine()!);
+}
+int number = Prompt("Введите число");
+
+int fnumber(int number)
+{
+while (number > 999)
+{
+number /= 10;
+}
+return number % 10;
 }
 
-int GetFirstDigit(int number1) 
+bool check(int number)
 {
-    return number1 % 10;
+if (number < 100)
+return false;
+else return true;
 }
 
-int num = GetRandomNumber();
-Console.WriteLine(num);
-int ferstdigit = GetFirstDigit(num);
-Console.WriteLine(ferstdigit);
-
+if (check(number) != true)
+Console.WriteLine("Третьей цифры нет");
+else
+Console.WriteLine($"Третья цифра числа {number} является {fnumber(number)}");
