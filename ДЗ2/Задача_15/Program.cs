@@ -22,5 +22,5 @@ void Week (int dayNumber) // метод для выбора дня недели
 }
 
 Console.Write("Введите цифру, обозначающую день недели: "); // запрос на ввод цифры
-int dayNumber = int.Parse(Console.ReadLine()); // переменная (накопитель)
+int dayNumber = int.Parse(Console.ReadLine()!); // переменная (накопитель)
 Week(dayNumber); // ?
