@@ -5,22 +5,22 @@
 // 1 -> нет
 
 
-void Week (int dayNumber) 
+void Week (int dayNumber) // метод для выбора дня недели
 {
-  if (dayNumber == 6 || dayNumber == 7)
+  if (dayNumber == 6 || dayNumber == 7) // если введена цифра 6 и 7 
    {
-      Console.WriteLine("Этот день выходной");
+      Console.WriteLine("Этот день выходной"); // выводим на консоль ...
    }
-   else if (dayNumber < 1 || dayNumber > 7)
-   {
-      Console.WriteLine("Это вообще не день недели");
+   else if (dayNumber < 1 || dayNumber > 7)  // если введена цифра меньше 1 и больше 7
+    {
+      Console.WriteLine("Это вообще не день недели"); //выводим на консоль ...
    }  
    else 
    { 
-      Console.WriteLine("Этот день не выходной");
+      Console.WriteLine("Этот день не выходной"); // в другом случае выводим на консоль ...
    }
 }
 
-Console.Write("Введите цифру, обозначающую день недели: ");
-int dayNumber = int.Parse(Console.ReadLine());
-Week(dayNumber);
+Console.Write("Введите цифру, обозначающую день недели: "); // запрос на ввод цифры
+int dayNumber = int.Parse(Console.ReadLine()); // переменная (накопитель)
+Week(dayNumber); // ?
