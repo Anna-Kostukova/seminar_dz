@@ -3,42 +3,36 @@
 // программу, которая покажет количество чётных чисел в
 // массиве.
 
-int sizeArray = GetNum("Введите длину массива: ");
-int min = GetNum("Введите минимальное значение диапазона для элементов массива: ");
-int max = GetNum("Введите максимальное значение диапазона для элементов массива: ");
-int[] array = GetArray(sizeArray, min, max);
+Console.WriteLine("Введите длину массива: ");
+int size = int.Parse(Console.ReadLine()!);
+int[] array = new int[size];
+GetArray(array);
+PrintArray(array);
+Console.WriteLine();
 int count = 0;
-for (int a = 0; a < sizeArray; a++)
+
+for (int a = 0; a < array.Length; a++)
 {
-    if (arr[a] % 2 == 0);
+    if (array[a] % 2 == 0)
     count++;
 }
-Console.WriteLine($"{count} из них чётные");
+Console.WriteLine($"{count} чисел в массиве чётные");
 
-PrintArray(array);
-
-int GetNum(string message)
+void GetArray(int[] array )
 {
-    Console.Write(message);
-    int num = int.Parse(Console.ReadLine()!);
-    return num;
-}
-
-int[] GetArray(int size, int minValue, int maxValue)
-{
-    int[] result = new int[size];
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        result[i] = new Random().Next(minValue, maxValue);
-    }
-    return result;
-}
-
-void PrintArray(int[] arr)
-{
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{arr[i]} ");
+       array[i] = new Random().Next(100, 1000);
     }
 }
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+}
+
+
 
